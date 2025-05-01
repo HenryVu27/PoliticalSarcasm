@@ -31,11 +31,11 @@
 
 The project consists of two main Jupyter notebooks:
 
-1.  **`SarcasmNLP_Classical.ipynb`:**
+1.  **`SarcasmNLP.ipynb`:**
     *   Explores classical NLP techniques.
     *   Covers data loading, filtering, EDA, preprocessing, BoW/TF-IDF feature extraction, Logistic Regression, feature engineering (contrast, sentiment, etc.), LDA topic modeling, subreddit analysis, and model comparison.
     *   Run cells sequentially to reproduce the analysis and results.
-2.  **`SarcasmNLP_Transformers.ipynb`:**
+2.  **`SarcasmLLM.ipynb`:**
     *   Implements a sarcasm detection model using a pre-trained Transformer (e.g., DistilBERT).
     *   Includes data preparation for Transformers (minimal preprocessing, combining parent comment), tokenization, fine-tuning using the Hugging Face `Trainer` API, evaluation, and inference examples.
     *   Requires installing `transformers`, `datasets`, and `evaluate`. A GPU is recommended for reasonable training times.
