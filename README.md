@@ -43,7 +43,7 @@ The project consists of two main Jupyter notebooks:
 
 ## Methodology
 
-### Classical NLP Approach (`SarcasmNLP_Classical.ipynb`)
+### Classical NLP Approach (`SarcasmNLP.ipynb`)
 
 *   **Preprocessing:** Lowercasing, removal of special characters/digits, tokenization, stopword removal.
 *   **EDA:** Class distribution, comment length analysis, word clouds for sarcastic/non-sarcastic comments.
@@ -66,21 +66,16 @@ The project consists of two main Jupyter notebooks:
     *   Error analysis on misclassified examples.
     *   Feature importance analysis for Logistic Regression.
 
-### Transformer-Based Approach (`SarcasmNLP_Transformers.ipynb`)
+### Transformer-Based Approach (`SarcasmLLM.ipynb`)
 
-*   **Model:** Fine-tuned a pre-trained Transformer model (e.g., `distilbert-base-uncased`).
-*   **Context:** Incorporated the `parent_comment` by concatenating it with the `comment` using the `[SEP]` token.
-*   **Preprocessing:** Minimal (lowercasing, stripping whitespace).
+*   **Model:** Fine-tuned a pre-trained Transformer model (RoBERTa).
 *   **Tokenization:** Used Hugging Face `AutoTokenizer` with padding and truncation.
 *   **Training:** Employed the Hugging Face `Trainer` API for efficient fine-tuning with evaluation and best model saving.
 *   **Evaluation:** Assessed using accuracy, F1-score, classification report, confusion matrix, and precision-recall curve on a held-out test set.
 
 ## Key Findings & Results
 
-*(Summarize your main results here. Be quantitative where possible.)*
-
 *   The baseline TF-IDF with N-grams and Logistic Regression achieved an accuracy of approximately **XX.X%** and a weighted F1-score of **X.XXX**.
-*   Adding engineered features (contrast, sentiment, etc.) to the classical model provided a **[small/moderate/negligible]** improvement, reaching **XX.X%** accuracy / **X.XXX** F1-score, suggesting these cues offer some signal but aren't sufficient alone.
 *   The fine-tuned Transformer model (DistilBERT with parent comment context) significantly outperformed the classical methods, achieving an accuracy of **YY.Y%** and a weighted F1-score of **Y.YYY** on the test set.
 *   Incorporating the parent comment context proved crucial for the Transformer model's success. *(Quantify if you tested with/without)*
 *   LDA revealed distinct topics associated with sarcastic vs. non-sarcastic comments. For example, Topic Z (keywords: ...) was more prevalent in sarcastic comments, while Topic Y (keywords: ...) was more common in non-sarcastic ones. *(Refer to your LDA results table/plots)*.
