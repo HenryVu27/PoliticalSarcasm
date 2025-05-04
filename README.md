@@ -26,13 +26,13 @@ The core components of this work include:
 
 This project uses data derived from the **Reddit Sarcasm Dataset**.
 
-*   **Original Dataset:** The original balanced dataset (`train-balanced-sarcasm.csv`) can typically be found on(Kaggle)[https://www.kaggle.com/datasets/danofer/sarcasm]
-*   **Filtering:** The notebooks operate on a filtered subset of this data, containing only comments from a predefined list of politically relevant subreddits (see `SarcasmNLP (1).ipynb` for the list and filtering code).
+*   **Original Dataset:** The original balanced dataset (`train-balanced-sarcasm.csv`) can typically be found on [Kaggle](https://www.kaggle.com/datasets/danofer/sarcasm)
+*   **Filtering:** The notebooks operate on a filtered subset of this data, containing only comments from a predefined list of politically relevant subreddits (see `SarcasmNLP.ipynb` for the list and filtering code).
 
 **Important:** Due to its size, the raw or filtered dataset is **not included** in this repository. To run the notebooks, you will need to:
 1.  Download the original `train-balanced-sarcasm.csv` file from the source linked above.
 2.  Place the file in the expected location (e.g., `/content/drive/MyDrive/SarcasmDetection/` if using the Google Colab setup, or update the paths in the notebooks for local execution).
-3.  The filtering logic is present in the `SarcasmNLP (1).ipynb` notebook and will be executed when run.
+3.  The filtering logic is present in the `SarcasmNLP.ipynb` notebook and will be executed when run.
 
 ## Setup and Installation
 
@@ -45,11 +45,9 @@ This project uses Python 3 and relies on several libraries. It's recommended to 
     ```
 
 2.  **Install dependencies:**
-    You can install the required packages using pip. A `requirements.txt` file is recommended (you may need to generate one based on the imports):
+    You can install the required packages using pip:
     ```bash
     pip install pandas numpy matplotlib seaborn scikit-learn nltk wordcloud torch torchvision torchaudio transformers plotly jupyterlab ipywidgets google-colab
-    # Or if a requirements.txt is provided:
-    # pip install -r requirements.txt
     ```
     *Note: `google-colab` is primarily for Colab compatibility; remove if running locally.*
 
@@ -62,7 +60,7 @@ This project uses Python 3 and relies on several libraries. It's recommended to 
     # nltk.download('punkt_tab') # Included in notebook, ensure it's needed or remove
     ```
 
-4.  **GPU Requirements:** Running the `SarcasmLLM (1).ipynb` notebook (transformer fine-tuning) is computationally intensive and highly recommended to be done on a machine with a CUDA-enabled GPU. The code automatically detects and uses a GPU if available via PyTorch.
+4.  **GPU Requirements:** Running the `SarcasmLLM.ipynb` notebook (transformer fine-tuning) is computationally intensive and highly recommended to be done on a machine with a CUDA-enabled GPU. The code automatically detects and uses a GPU if available via PyTorch.
 
 ## Usage
 
@@ -78,8 +76,4 @@ This project uses Python 3 and relies on several libraries. It's recommended to 
 
 The fine-tuned DistilRoBERTa model achieved the best performance, significantly outperforming the traditional NLP approaches. However, the novel feature engineering implemented substantially improved the baseline performance of the traditional models. LDA topic modeling revealed distinct thematic differences between sarcastic and non-sarcastic political comments.
 
-For detailed results, performance metrics, visualizations, and analysis, please refer to the comprehensive report located in the `/report` directory (`report.pdf`).
-
-## Report
-
-A detailed project report, written in LaTeX, is available in the `/report` directory. It covers the methodology, experiments, results, discussion, and conclusions in depth. The compiled PDF version (`report.pdf`) is recommended for reading.
+For detailed results, performance metrics, visualizations, and analysis, please refer to the comprehensive report (`report.pdf`).
