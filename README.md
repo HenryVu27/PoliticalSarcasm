@@ -26,8 +26,7 @@ The core components of this work include:
 
 This project uses data derived from the **Reddit Sarcasm Dataset**.
 
-*   **Original Dataset:** The original balanced dataset (`train-balanced-sarcasm.csv`) can typically be found on platforms like Kaggle.
-    *   **Link (Placeholder):** [Link to Reddit Sarcasm Dataset on Kaggle or other source - e.g., https://www.kaggle.com/datasets/danofer/sarcasm]
+*   **Original Dataset:** The original balanced dataset (`train-balanced-sarcasm.csv`) can typically be found on(Kaggle)[Link to Reddit Sarcasm Dataset on Kaggle or other source - e.g., https://www.kaggle.com/datasets/danofer/sarcasm]
 *   **Filtering:** The notebooks operate on a filtered subset of this data, containing only comments from a predefined list of politically relevant subreddits (see `SarcasmNLP (1).ipynb` for the list and filtering code).
 
 **Important:** Due to its size, the raw or filtered dataset is **not included** in this repository. To run the notebooks, you will need to:
