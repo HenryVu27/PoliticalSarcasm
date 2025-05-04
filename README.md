@@ -57,7 +57,7 @@ This project uses Python 3 and relies on several libraries. It's recommended to 
     import nltk
     nltk.download('punkt')
     nltk.download('stopwords')
-    # nltk.download('punkt_tab') # Included in notebook, ensure it's needed or remove
+    nltk.download('punkt_tab')
     ```
 
 4.  **GPU Requirements:** Running the `SarcasmLLM.ipynb` notebook (transformer fine-tuning) is computationally intensive and highly recommended to be done on a machine with a CUDA-enabled GPU. The code automatically detects and uses a GPU if available via PyTorch.
