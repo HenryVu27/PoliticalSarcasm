@@ -40,8 +40,8 @@ This project uses Python 3 and relies on several libraries. It's recommended to 
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
-    cd <repository-name>
+    git clone [<repository-url>](https://github.com/HenryVu27/PoliticalSarcasm.git)
+    cd PoliticalSarcasm
     ```
 
 2.  **Install dependencies:**
