@@ -2,6 +2,8 @@
 
 This repository contains the code and report for a project focused on detecting sarcasm in political comments sourced from Reddit. It compares traditional Natural Language Processing (NLP) techniques, enhanced with extensive feature engineering, against a fine-tuned transformer model (DistilRoBERTa).
 
+Link to Project Video: [Youtube](https://youtu.be/Vh52Sy-sdKo)
+
 ## Overview
 
 Sarcasm detection is a challenging NLP task, especially in nuanced domains like political discourse. This project utilizes a dataset of Reddit comments labeled for sarcasm (often via the '/s' marker) and filters it to focus specifically on politically-oriented subreddits.
